@@ -1,6 +1,16 @@
 {
   "source": "OpenAlex",
   "orcid": "0000-0001-7673-4156",
-  "last_updated": null,
-  "publications": []
+  "last_updated": "2026-10-23T11:38:15+00:00",
+  "publications": [
+    {
+      "title": "Exploring the Status of Urban Greenspaces in Indian Cities",
+      "authors": "Akanksha Sangwan, Nand Kumar, Ashwani Kumar, Kshitiz Agarwal, Pushpendra Kumar Chaturvedi",
+      "venue": "International Review for Spatial Planning and Sustainable Development",
+      "year": "2026",
+      "url": "https://doi.org/10.14246/irspsd.14.4_73",
+      "doi": "10.14246/irspsd.14.4_73",
+      "openalex_id": "https://openalex.org/W7221811090"
+    }
+  ]
 }
