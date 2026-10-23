@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
     "role": "Architect · Urban Planner · PhD Researcher",
     "affiliation": "Department of Architecture and Planning, IIT Roorkee",
     "location": "Roorkee, Uttarakhand, India",
-    "headline": "From Himalayan landscapes to resilient urban futures.",
+    "headline": "Architecture · Spatial Planning · Research · Practice",
     "intro": "Exploring the connections between land, water, people and the built environment.",
     "bio": "I am an architect, urban planner and doctoral researcher at IIT Roorkee. My work connects urban water resilience, ecological planning, geospatial analysis and design with experience in architectural practice and project delivery. Rooted in the Dehradun valley and the Himalayan foothills, I am interested in how landscapes and cities can adapt together.",
     "email": "kshitiz_a@ar.iitr.ac.in",
@@ -15,14 +15,14 @@ window.PORTFOLIO_DATA = {
     "orcid": "https://orcid.org/0000-0001-7673-4156",
     "researchgate": "https://www.researchgate.net/profile/Kshitiz-Agarwal-4",
     "updated": "2026-10-23",
-    "heroLabel": "ROOTED IN THE HIMALAYAS · WORKING ACROSS DISCIPLINES",
+    "heroLabel": "",
     "heroStatement": "Land. Water. People.",
-    "heroSubtitle": "Research · Planning · Design · Practice",
+    "heroSubtitle": "Architecture · Spatial Planning · Research · Practice",
     "place": "Dehradun · Himalayan foothills"
   },
   "focusAreas": [
     "Urban flood risk & water resilience",
-    "GIS, remote sensing & GeoAI",
+    "Spatial planning · GIS · GeoAI",
     "Nature-based solutions",
     "Urban planning & ecological design",
     "Architecture & project delivery"
