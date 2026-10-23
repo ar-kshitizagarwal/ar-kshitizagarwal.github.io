@@ -1,58 +1,45 @@
-# Kshitiz Agarwal — visual portfolio redesign (October 2026)
+# Automatic publication updates (GitHub Pages add-on)
 
-A lightweight, multi-page, visually led static website for GitHub Pages. It uses **your uploaded Himalaya panorama**, **your portrait**, **your river/urban-resilience illustration**, and **your Centrio Mall photograph**. The Bhagirathi resort project links to the supplied official website; images from that site are **not** copied.
+This add-on uses OpenAlex, NOT a direct Google Scholar API. Google Scholar does not offer a supported official API for reading author-profile publications. Google Scholar's own automatic article updates change its profile only, not your website. OpenAlex has a free API, and this add-on looks up works connected to the public ORCID 0000-0001-7673-4156.
 
-## Main changes
+## Install once
 
-- Homepage has a scenic Himalaya hero, short introduction, four illustrated work-area cards, three featured projects, two publication previews, and contact.
-- Full text moves to separate pages: `work.html`, `publications.html`, `about.html`, and `cv.html`.
-- Header portrait is a direct `<img>` tag, rather than relying on the previous header-photo JavaScript mechanism.
-- All nine existing projects and three publications remain in the editable `content.js` data file; unfinished editorial remarks have been removed from visitor-facing text.
-- Work filters link to `work.html?focus=water`, `planning`, `architecture`, or `delivery`.
-- Content editor remains available at `editor.html`. It exports a replacement `content.js`. The hero title and work-area layout are fixed in HTML and must be edited in HTML/CSS if you want to change them.
-- A CV-style page can be printed to PDF using the browser Print button. No private phone number or uploaded original CV is included.
+1. BACK UP your existing website files first (especially index.html, publications.html, cv.html, and content.js).
+2. Upload these NEW files to the same repository, keeping the folder structure:
+   - publications-auto.json
+   - publication-loader.js
+   - scripts/update_publications.py
+   - .github/workflows/update-publications.yml
+3. In each of these THREE existing HTML files: index.html, publications.html, cv.html,
+   find `<script defer src="site.js"></script>` and immediately after it insert:
+   `<script defer src="publication-loader.js"></script>`
+   Leave the current site.js, content.js, and CSS alone.
+4. Commit all changes to the main branch.
+5. In GitHub go to Actions > Update academic publications > Run workflow. (Enable workflows if prompted.)
+6. In Settings > Actions > General > Workflow permissions, select Read and write permissions if your repository permits it. Check that the workflow succeeds and generates items in publications-auto.json.
+7. Future updates run weekly on Monday. If new records appear, GitHub Actions commits changed publications-auto.json, triggering a normal GitHub Pages deployment.
 
-## Publish to your existing GitHub Pages site
+## Optional free OpenAlex key
 
-Repository: https://github.com/ar-kshitizagarwal/ar-kshitizagarwal.github.io
+If you want a free API key, register on https://openalex.org, copy your key, add it to GitHub repository Settings > Secrets and variables > Actions > New repository secret, Name: OPENALEX_API_KEY. Never put a key in site code or a public repository. A small weekly profile lookup can run without a key under current OpenAlex limits.
 
-1. **Back up** your existing website files, especially `content.js` if you have made new edits since our last exchange. You can download the repo ZIP via **Code → Download ZIP**.
-2. Unzip the new portfolio ZIP on your computer.
-3. In your GitHub repository, click **Add file → Upload files** and upload the **contents** of this ZIP to the repository root (`main` branch, `/(root)`). You may drag the extracted folders/files so GitHub preserves the `assets/images` subfolder. Do **not** upload the ZIP as a single file or nest the whole package inside a new folder.
-4. Commit the upload. Select replacement for existing `index.html`, `content.js`, `styles.css`, `README.md` if GitHub asks.
-5. Allow GitHub Pages deployment to complete under **Actions**, then hard-refresh https://ar-kshitizagarwal.github.io/ (Ctrl+F5).
-6. Test pages: `/work.html`, `/publications.html`, `/about.html`, `/cv.html`, and `/editor.html`.
+## Google Scholar settings
 
-### Files newly added
-`site.js`, `work.html`, `publications.html`, `about.html`, `cv.html`, `assets/favicon.svg`, `assets/images/*`.
+On https://scholar.google.com/citations?user=jjQREYoAAAAJ&hl=en, select Configure article updates and enable automatic updates. That keeps *Google Scholar* fresh, but OpenAlex may index a publication on a different timeline. These sources are not identical.
 
-### Existing files replaced
-`index.html`, `styles.css`, `content.js`, and this `README.md`.
+## Quality and fallback
 
-The old `app.js` can remain in the repository unused; the new pages only load `site.js` and `content.js`. Your `portrait.jpg` may also remain unused; the new header/photo loads `assets/images/portrait.webp` directly.
+- The new feed does not modify the manually curated publications in content.js.
+- The browser combines the existing publications with new records by title/DOI. It fills the Publications, Home (top 2), and CV views.
+- If OpenAlex cannot be reached, the old publications-auto.json stays as-is.
+- If no new OpenAlex works are found, your original publication list remains intact.
+- Very occasionally an OpenAlex paper may be wrongly attributed or missing; review the published result and correct source records.
+- In some cases OpenAlex does not have ORCID attached to a paper. You can still add it manually through your existing content editor.
+- The workflow requires your GitHub Actions token to be allowed to commit changes. If it shows a 403 permission error, check repository workflow write permissions.
 
-If your website has newer content edits, do **not** blindly overwrite them: merge any new projects/publications into the new `content.js` first.
+## Check your linked author identity
 
-## Add new projects or edit text
+Open in a browser:
+https://api.openalex.org/works?filter=authorships.author.orcid%3A0000-0001-7673-4156&per_page=20
 
-1. Open `editor.html` from your local extracted website folder or at `https://ar-kshitizagarwal.github.io/editor.html`.
-2. Select Profile, Projects, Publications, Education, Experience, Credentials, Engagements, or Skills.
-3. Make changes, click **Save entry**, then **Download content.js**.
-4. Replace `content.js` in the GitHub repository root and commit.
-
-### Project images
-
-Upload your image under `assets/images/` or `assets/projects/`, then set the project `image` property in the editor, e.g. `assets/projects/bindal-map.webp`. Use lightweight web-optimized images. Both pages read projects from `content.js`; a new project will appear on the Work page automatically. The homepage's **three featured projects** are set by the `featuredProjects` IDs in `content.js`; to change which appear there, update that array.
-
-The four domain illustrations on the homepage are HTML image references and can be changed by editing `index.html`. Hero background is set in `.hero-photo` within `styles.css`.
-
-## Important checks before publishing
-
-- Confirm you have permission to display the uploaded river illustration and Centrio Mall photograph publicly (or replace as needed).
-- Review project descriptions and precise roles, particularly the hospitality projects. Do not imply responsibility for work you did not personally undertake.
-- Bhagirathi resort: linked to https://www.avatarabybhagirathi.com/ as a reference; project scope has deliberately not been specified.
-- The Himalaya panoramic photo is only about 1201 × 300 px; it works well as a soft scenic background, but a higher-resolution image would improve sharpness on very large monitors.
-
-## Technical details
-
-No frameworks, dependencies, trackers, database, paid hosting, or server build. Files can also be opened offline by double-clicking `index.html` (some browsers may restrict local file scripts). All links are relative and work at the GitHub Pages user-site root. The website supports mobile, reduced motion, keyboard focus, and printing the CV.
+Look for `meta.count` and review `results`. If `meta.count` is zero, OpenAlex may not yet connect your ORCID to those works. Don't assume Google Scholar and OpenAlex cover the same publications.
