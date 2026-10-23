@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kshitiz Agarwal — researcher, architect and urban planner. Research, projects, publications and CV." />
+  <meta name="theme-color" content="#101c28" />
+  <title>Kshitiz Agarwal | Research & Practice</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="content.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Kshitiz Agarwal home"><span class="brand-mark">ka<span>.</span></span><span class="brand-name">Kshitiz Agarwal</span></a>
+      <nav aria-label="Primary navigation" class="main-nav">
+        <a href="#work">Work</a><a href="#publications">Publications</a><a href="#about">About</a><a href="#cv">CV</a>
+      </nav>
+      <a class="contact-pill" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section id="top" class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> RESEARCH × DESIGN × PRACTICE</p>
+        <h1 id="profile-headline">Understanding places.<br/><em>Designing for resilience.</em></h1>
+        <p class="hero-intro" id="profile-intro"></p>
+        <div class="hero-actions"><a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#cv">View academic CV <span aria-hidden="true">→</span></a></div>
+        <p class="hero-identity"><span id="profile-role"></span><span class="identity-sep">·</span><span id="profile-affiliation"></span></p>
+      </div>
+      <div class="hero-panel" aria-label="Interdisciplinary research and practice illustration">
+        <svg class="contour-art" viewBox="0 0 520 530" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b5d4d3" stop-opacity="0.1"/><stop offset="1" stop-color="#e4ae79" stop-opacity="0.7"/></linearGradient></defs>
+          <g fill="none" stroke="url(#lineGrad)" stroke-width="1.1" opacity=".75">
+            <path d="M-46 350 C38 305 68 352 105 282 S155 158 264 170 S410 98 570 122"/><path d="M-45 373 C40 322 74 372 125 296 S176 187 277 195 S431 115 564 151"/><path d="M-36 396 C47 339 94 392 141 320 S196 211 292 218 S450 146 552 181"/><path d="M-34 422 C47 360 105 419 157 341 S207 244 310 247 S462 181 552 206"/><path d="M-30 451 C61 389 122 443 172 368 S231 263 328 277 S467 214 550 239"/><path d="M-25 475 C65 412 142 473 191 386 S253 297 349 301 S471 253 551 266"/><path d="M-26 498 C77 439 163 493 213 404 S284 316 368 324 S470 285 553 299"/><path d="M-29 523 C88 461 184 508 237 428 S304 337 386 354 S472 315 557 324"/><path d="M-35 546 C98 477 210 539 263 449 S335 370 402 378 S492 354 550 362"/>
+          </g>
+          <path d="M-20 500 C88 479 77 340 173 311 S227 205 324 223 S395 173 545 109" stroke="#d4a67b" stroke-width="2.1" fill="none" stroke-linecap="round" opacity=".9"/>
+          <g fill="#d9b78e"><circle cx="173" cy="311" r="4"/><circle cx="324" cy="223" r="4"/><circle cx="426" cy="179" r="4"/></g>
+          <g stroke="#a4c8c5" opacity=".24"><path d="M20 0V530M100 0V530M180 0V530M260 0V530M340 0V530M420 0V530M500 0V530"/><path d="M0 65H520M0 145H520M0 225H520M0 305H520M0 385H520M0 465H520"/></g>
+        </svg>
+        <div class="panel-top"><span>01 / CURRENT FOCUS</span><span class="panel-cross">✳</span></div>
+        <div class="panel-center"><span class="panel-small">Connecting the dots between</span><strong>Land.<br/>Water.<br/>People.</strong></div>
+        <div class="panel-bottom"><span>Urban systems + adaptive futures</span><span>↗</span></div>
+      </div>
+    </section>
+    <section class="expertise-band" aria-label="Areas of focus"><div class="container"><div class="band-title">ACROSS DISCIPLINES</div><div class="expertise-list" id="focus-list"></div></div></section>
+    <section id="work" class="section container work-section">
+      <div class="section-header"><div><p class="eyebrow section-kicker">01 / PORTFOLIO</p><h2>Selected <em>work</em></h2><p class="section-subtitle">Research in progress, published studies, and professional work from across disciplines.</p></div><div class="section-counter" id="project-count"></div></div>
+      <div class="filter-bar" id="project-filters" role="group" aria-label="Filter projects"></div>
+      <div class="work-grid" id="project-grid"></div>
+    </section>
+    <section id="publications" class="section publications-section"><div class="container"><div class="section-header"><div><p class="eyebrow section-kicker">02 / RESEARCH OUTPUT</p><h2>Selected <em>publications</em></h2><p class="section-subtitle">Selected published work and book chapters. Full records and updates on Google Scholar.</p></div><a id="scholar-publications-link" class="inline-link hidden" href="#">Google Scholar ↗</a></div><div class="publication-list" id="publication-list"></div></div></section>
+    <section id="about" class="section container about-section"><div class="about-label"><p class="eyebrow section-kicker">03 / ABOUT</p><h2>Thinking across <em>scales.</em></h2></div><div class="about-content"><p id="profile-bio"></p><div class="about-links" id="about-links"></div><p class="small-note">My work spans academic inquiry, urban and environmental planning, architectural practice and project delivery. This website is a growing record of that work.</p></div></section>
+    <section id="cv" class="section cv-section"><div class="container"><div class="section-header"><div><p class="eyebrow section-kicker">04 / CURRICULUM VITAE</p><h2>Experience & <em>education</em></h2></div><button id="print-cv" class="button button-outline" type="button">Print / Save CV as PDF ↗</button></div><div class="print-identity"><h1 id="print-name">Kshitiz Agarwal</h1><p id="print-role"></p></div><div class="cv-columns"><div><h3>Education</h3><div id="education-list" class="timeline"></div></div><div><h3>Professional experience</h3><div id="experience-list" class="timeline"></div></div></div><div class="credential-group"><h3>Professional credentials</h3><div id="credential-list" class="credential-list"></div></div><div class="cv-additional"><div><h3>Selected academic engagement & training</h3><div id="engagement-list" class="short-list"></div></div><div><h3>Skills & tools</h3><div id="skills-list" class="short-list"></div></div></div></div></section>
+    <section id="contact" class="contact-section"><div class="container contact-inner"><div><p class="eyebrow">05 / CONNECT</p><h2>Have a project<br/>or question in mind?</h2><p>Interested in research collaborations, interdisciplinary projects or exchanging ideas.</p></div><div class="contact-links" id="contact-links"></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="current-year"></span> <span id="footer-name">Kshitiz Agarwal</span></span><span>Built light, without trackers or frameworks.</span><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
