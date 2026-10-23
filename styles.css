@@ -23,3 +23,12 @@
 .short-item .period{display:block;font-size:11px;font-weight:700;color:#4c8380;margin-top:5px}
 @media(max-width:680px){.cv-additional{grid-template-columns:1fr;gap:22px}}
 @media print{.cv-additional{gap:25pt;margin-top:22pt;break-before:auto}.short-item{break-inside:avoid}.short-item strong{font-size:10pt}.short-item .detail,.short-item .period{font-size:9pt}}
+
+/* Photo-ready portrait: displays initials until portrait.jpg is uploaded. */
+.hero-signature{display:flex;align-items:center;gap:17px;margin-top:4px}
+.hero-portrait{flex:0 0 auto;width:82px;height:82px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:linear-gradient(135deg,#234c57,#80aaa7);border:3px solid #fff;outline:1px solid #c7d6d2;color:white;box-shadow:0 5px 20px #122b3822}
+.hero-portrait>span{font-weight:700;font-size:26px;letter-spacing:1px}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.hero-portrait [hidden]{display:none!important}
+.hero-signature .hero-identity{margin:0;line-height:1.8}
+@media(max-width:680px){.hero-signature{gap:13px}.hero-portrait{width:70px;height:70px}.hero-portrait>span{font-size:23px}}

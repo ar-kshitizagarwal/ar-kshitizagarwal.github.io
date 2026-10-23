@@ -4,7 +4,7 @@ if(!window.PORTFOLIO_DATA){document.body.textContent='Missing content.js file.';
 const data=JSON.parse(JSON.stringify(window.PORTFOLIO_DATA));
 const $=id=>document.getElementById(id);
 const fields={
- profile:[['name','Name'],['role','Professional description'],['affiliation','Affiliation'],['location','Location'],['headline','Main headline'],['intro','Hero introduction','large'],['bio','Full biography','large'],['email','Contact email'],['linkedin','LinkedIn URL'],['scholar','Google Scholar public profile URL'],['orcid','ORCID URL'],['researchgate','ResearchGate URL']],
+ profile:[['name','Name'],['photo','Portrait image path (e.g. portrait.jpg)'],['role','Professional description'],['affiliation','Affiliation'],['location','Location'],['headline','Main headline'],['intro','Hero introduction','large'],['bio','Full biography','large'],['email','Contact email'],['linkedin','LinkedIn URL'],['scholar','Google Scholar public profile URL'],['orcid','ORCID URL'],['researchgate','ResearchGate URL']],
  projects:[['title','Project title'],['category','Category (e.g. Research, Architecture, Urban planning)'],['status','Status'],['year','Year or date range'],['description','Project description','large'],['tags','Tags separated by commas','tags'],['url','Project link (optional)'],['image','Image path (optional, e.g. assets/projects/photo.webp)']],
  publications:[['title','Publication title','large'],['authors','Author names'],['venue','Journal / book / conference'],['year','Year'],['url','DOI / publication link']],
  education:[['degree','Degree'],['institution','Institution'],['period','Period']],

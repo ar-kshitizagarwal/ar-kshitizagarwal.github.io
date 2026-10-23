@@ -2,6 +2,7 @@
 window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Kshitiz Agarwal",
+    "photo": "portrait.jpg",
     "role": "Architect · Urban Planner · PhD Researcher",
     "affiliation": "Department of Architecture and Planning, IIT Roorkee",
     "location": "Roorkee, Uttarakhand, India",
