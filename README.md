@@ -1,85 +1,58 @@
-# Personal Portfolio / Academic CV Starter
+# Kshitiz Agarwal — visual portfolio redesign (October 2026)
 
-A clean, responsive, lightweight personal website for an interdisciplinary researcher and design professional. **No frameworks, build commands, paid services, databases, cookies, or tracking.** The website works directly as static files.
+A lightweight, multi-page, visually led static website for GitHub Pages. It uses **your uploaded Himalaya panorama**, **your portrait**, **your river/urban-resilience illustration**, and **your Centrio Mall photograph**. The Bhagirathi resort project links to the supplied official website; images from that site are **not** copied.
 
-## Preview locally
+## Main changes
 
-Open `index.html` by double-clicking it. Open `editor.html` to edit content. Both work without installing anything or using a local server. The included content is a **starter draft** and requires your review before public publishing.
+- Homepage has a scenic Himalaya hero, short introduction, four illustrated work-area cards, three featured projects, two publication previews, and contact.
+- Full text moves to separate pages: `work.html`, `publications.html`, `about.html`, and `cv.html`.
+- Header portrait is a direct `<img>` tag, rather than relying on the previous header-photo JavaScript mechanism.
+- All nine existing projects and three publications remain in the editable `content.js` data file; unfinished editorial remarks have been removed from visitor-facing text.
+- Work filters link to `work.html?focus=water`, `planning`, `architecture`, or `delivery`.
+- Content editor remains available at `editor.html`. It exports a replacement `content.js`. The hero title and work-area layout are fixed in HTML and must be edited in HTML/CSS if you want to change them.
+- A CV-style page can be printed to PDF using the browser Print button. No private phone number or uploaded original CV is included.
 
-## Quickest content updates (under a few minutes)
+## Publish to your existing GitHub Pages site
 
-1. Open `editor.html` in your browser (locally or from the published site).
-2. Choose **Projects**, **Publications**, **Education**, **Experience**, **Credentials**, or **Profile**.
-3. Add or revise an entry and click **Save entry**.
-4. Click **Download content.js** to save all changes.
-5. In your GitHub repository, open `content.js`, click the edit (pencil) icon, replace the file's contents with those of the downloaded `content.js`, and commit.
-6. GitHub Pages publishes the new version. The editor itself is not connected to GitHub; it cannot publish changes automatically.
+Repository: https://github.com/ar-kshitizagarwal/ar-kshitizagarwal.github.io
 
-You can also edit `content.js` directly in GitHub. The data is readable and logically grouped.
+1. **Back up** your existing website files, especially `content.js` if you have made new edits since our last exchange. You can download the repo ZIP via **Code → Download ZIP**.
+2. Unzip the new portfolio ZIP on your computer.
+3. In your GitHub repository, click **Add file → Upload files** and upload the **contents** of this ZIP to the repository root (`main` branch, `/(root)`). You may drag the extracted folders/files so GitHub preserves the `assets/images` subfolder. Do **not** upload the ZIP as a single file or nest the whole package inside a new folder.
+4. Commit the upload. Select replacement for existing `index.html`, `content.js`, `styles.css`, `README.md` if GitHub asks.
+5. Allow GitHub Pages deployment to complete under **Actions**, then hard-refresh https://ar-kshitizagarwal.github.io/ (Ctrl+F5).
+6. Test pages: `/work.html`, `/publications.html`, `/about.html`, `/cv.html`, and `/editor.html`.
 
-## Publish for free using GitHub Pages
+### Files newly added
+`site.js`, `work.html`, `publications.html`, `about.html`, `cv.html`, `assets/favicon.svg`, `assets/images/*`.
 
-1. Create or log into a free GitHub account.
-2. Create a **public** repository named `<your-github-username>.github.io` (exact username, not your actual name unless they match).
-3. Upload **all** starter files into the repository's root (preserving folders), and commit.
-4. In the repository, go to **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**. Choose `main` and `/(root)`, then save.
-5. Visit `https://<your-github-username>.github.io/` after GitHub Pages deploys. Check deployment details in the repository's Pages settings or Actions tab.
+### Existing files replaced
+`index.html`, `styles.css`, `content.js`, and this `README.md`.
 
-`.nojekyll` disables unnecessary Jekyll processing. You do not have to install Jekyll or Node.js.
+The old `app.js` can remain in the repository unused; the new pages only load `site.js` and `content.js`. Your `portrait.jpg` may also remain unused; the new header/photo loads `assets/images/portrait.webp` directly.
 
-**Cost:** Free on GitHub Pages when hosted from a public GitHub Free repository with a `github.io` address. A custom domain, if you choose one later, is purchased separately. Website source and published material are public, so do not upload private details.
+If your website has newer content edits, do **not** blindly overwrite them: merge any new projects/publications into the new `content.js` first.
 
-## How to add a project image
+## Add new projects or edit text
 
-1. Compress the photo, diagram, visual abstract, map or project thumbnail. Prefer WebP around 1200 pixels wide and, when possible, below ~250 KB.
-2. Upload it to `assets/projects/` on GitHub.
-3. In the editor, choose the project and set **Image path** to `assets/projects/your-image.webp`.
-4. Download and commit `content.js`.
+1. Open `editor.html` from your local extracted website folder or at `https://ar-kshitizagarwal.github.io/editor.html`.
+2. Select Profile, Projects, Publications, Education, Experience, Credentials, Engagements, or Skills.
+3. Make changes, click **Save entry**, then **Download content.js**.
+4. Replace `content.js` in the GitHub repository root and commit.
 
-Only publish visuals you own or have permission to publish. If no image is added, the design uses a lightweight abstract CSS background.
+### Project images
 
-## Content included in the updated October 2026 edition
+Upload your image under `assets/images/` or `assets/projects/`, then set the project `image` property in the editor, e.g. `assets/projects/bindal-map.webp`. Use lightweight web-optimized images. Both pages read projects from `content.js`; a new project will appear on the Work page automatically. The homepage's **three featured projects** are set by the `featuredProjects` IDs in `content.js`; to change which appear there, update that array.
 
-The supplied three-page CV is the primary source for education, experience, skills, certifications, workshops and academic engagements. LinkedIn supplied a small sample of professional project names; some project-specific scopes and image permissions remain to be verified. The supplied Google Scholar and ResearchGate links have been added. The provided Google Scholar URL is treated as the intended profile URL but its contents could not be independently inspected. The contact section uses the institutional email; the phone number is deliberately omitted.
+The four domain illustrations on the homepage are HTML image references and can be changed by editing `index.html`. Hero background is set in `.hero-photo` within `styles.css`.
 
-## What has been prefilled
+## Important checks before publishing
 
-This edition uses the latest October 2026 CV for the main biography and timeline, public LinkedIn project listings for selected historic cards, and the JST LOTUS proposal for the collaborative project description and ORCID. Check all details and dates before publishing.
+- Confirm you have permission to display the uploaded river illustration and Centrio Mall photograph publicly (or replace as needed).
+- Review project descriptions and precise roles, particularly the hospitality projects. Do not imply responsibility for work you did not personally undertake.
+- Bhagirathi resort: linked to https://www.avatarabybhagirathi.com/ as a reference; project scope has deliberately not been specified.
+- The Himalaya panoramic photo is only about 1201 × 300 px; it works well as a soft scenic background, but a higher-resolution image would improve sharpness on very large monitors.
 
-Items requiring your input:
+## Technical details
 
-- **Current complete resume PDF**: Used for the main CV content. For public PDF download, prepare a redacted/public version before uploading; it is NOT included in this ZIP.
-- **Google Scholar**: Linked to the URL you supplied; remove `authuser=1` from the public link. Confirm that the profile is public and its publication list is accurate.
-- **Project descriptions and imagery**: Replace generic prior-project descriptions with precise contributions, credits and approved visuals.
-- **Contact email**: The institutional IIT Roorkee email from the CV is prefilled; change or remove it in the editor if you prefer.
-- **Work-specific pages**: Current version features one card per project; detail pages can be added in a later iteration if needed.
-
-## Input sources and synchronization
-
-- **Resume PDF:** best treated as a one-time import / source for the editable CV and portfolio content; upload the latest PDF to ChatGPT for extraction and review.
-- **LinkedIn:** linked directly from the website. Public details can be used for a **one-time curated import** after review; ongoing automatic synchronization is not assumed or required.
-- **Google Scholar:** link to the public profile and maintain a curated list of selected publications. Google Scholar has no dependable official public profile API; automated scraping is fragile and rate-limited. For an automated bibliography later, consider an ORCID-based import (with DOI validation) or a DOI list.
-
-## Site files
-
-- `index.html` — website layout
-- `styles.css` — colours, typography, responsive layouts, print-to-PDF CV
-- `content.js` — **all portfolio data**
-- `app.js` — reads the data, renders the site, filters projects
-- `editor.html` + `editor.js` — offline browser editor; exports updated data
-- `assets/projects/` — optional images
-- `.nojekyll` — GitHub Pages deployment compatibility
-
-## Privacy and publication checks
-
-Do not add private addresses, phone numbers, confidential project drawings, proprietary client work, internal documents, or unpublished results without approval. Use source citations and explain personal contribution where several people worked on a project. Review URLs, affiliations, dates and publication status before making the repository public.
-
-## Website launch checklist
-
-- Check Google Scholar visibility in an incognito window.
-- Verify the bibliographic type and DOI of the 2023 district disaster management plan work: the CV has a duplicated `10.7770/10.7770` prefix, so the website links to ResearchGate while this is clarified.
-- Check exact title/year/project roles on professional cards, and replace cautious placeholder descriptions with approved contributions and images.
-- Review the planned/ongoing status of all research entries prior to publishing.
-- Add a suitable professional headshot and selected portfolio visuals in a subsequent iteration.
-- If including a downloadable CV PDF, publish a reviewed public-facing copy (consider omitting phone number).
-- Keep sources and individual contributions clear and avoid confidential drawings or unpublished results.
+No frameworks, dependencies, trackers, database, paid hosting, or server build. Files can also be opened offline by double-clicking `index.html` (some browsers may restrict local file scripts). All links are relative and work at the GitHub Pages user-site root. The website supports mobile, reduced motion, keyboard focus, and printing the CV.

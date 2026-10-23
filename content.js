@@ -1,20 +1,24 @@
-/* Site data. Edit using editor.html; review before publishing. */
+/* Public website content; update through editor.html and re-upload to GitHub. */
 window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Kshitiz Agarwal",
-    "photo": "portrait.jpg",
+    "photo": "assets/images/portrait.webp",
     "role": "Architect · Urban Planner · PhD Researcher",
     "affiliation": "Department of Architecture and Planning, IIT Roorkee",
     "location": "Roorkee, Uttarakhand, India",
-    "headline": "Understanding places. Designing for resilience.",
-    "intro": "I work at the intersection of architecture, urban planning, climate resilience and spatial analysis — connecting environmental research with practical planning and project delivery.",
-    "bio": "I am a PhD research scholar in the Department of Architecture and Planning at IIT Roorkee, studying urban water resilience, wastewater circularity and flood-risk mitigation. My background includes a Master of Planning from MNIT Jaipur, architectural practice, teaching, design management and hospitality project operations. I combine GIS and hydrological modelling with nature-based and planning approaches to support decision-making in complex urban environments.",
+    "headline": "From Himalayan landscapes to resilient urban futures.",
+    "intro": "Exploring the connections between land, water, people and the built environment.",
+    "bio": "I am an architect, urban planner and doctoral researcher at IIT Roorkee. My work connects urban water resilience, ecological planning, geospatial analysis and design with experience in architectural practice and project delivery. Rooted in the Dehradun valley and the Himalayan foothills, I am interested in how landscapes and cities can adapt together.",
     "email": "kshitiz_a@ar.iitr.ac.in",
     "linkedin": "https://www.linkedin.com/in/kshitiz-agarwal30/",
     "scholar": "https://scholar.google.com/citations?user=jjQREYoAAAAJ&hl=en",
     "orcid": "https://orcid.org/0000-0001-7673-4156",
     "researchgate": "https://www.researchgate.net/profile/Kshitiz-Agarwal-4",
-    "updated": "2026-10-23"
+    "updated": "2026-10-23",
+    "heroLabel": "ROOTED IN THE HIMALAYAS · WORKING ACROSS DISCIPLINES",
+    "heroStatement": "Land. Water. People.",
+    "heroSubtitle": "Research · Planning · Design · Practice",
+    "place": "Dehradun · Himalayan foothills"
   },
   "focusAreas": [
     "Urban flood risk & water resilience",
@@ -30,7 +34,7 @@ window.PORTFOLIO_DATA = {
       "category": "Research",
       "status": "Selected project · initiating",
       "year": "2026–",
-      "description": "India–Japan JST LOTUS research with Tohoku University / IRIDeS. The proposed methodology links GIS, AI and spatial optimization to identify suitable opportunity areas for nature-based interventions in urban hazard-prone landscapes. Research outcomes have not yet been reported.",
+      "description": "India–Japan research linking geospatial intelligence and nature-based solutions to help locate interventions in hazard-prone urban landscapes. Project at the research initiation stage.",
       "tags": [
         "JST LOTUS",
         "GeoAI",
@@ -38,7 +42,8 @@ window.PORTFOLIO_DATA = {
         "India–Japan"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/water-systems.webp",
+      "imageAlt": "Illustration of degraded and restored river landscapes"
     },
     {
       "id": "phd-water-resilience",
@@ -46,14 +51,15 @@ window.PORTFOLIO_DATA = {
       "category": "Research",
       "status": "PhD research · ongoing",
       "year": "2024–",
-      "description": "Doctoral research at IIT Roorkee investigating local-scale wastewater circularity and its relationship with flood mitigation and water augmentation, using spatial risk assessment and scenario-based planning.",
+      "description": "Investigating local-scale wastewater circularity, flood mitigation and water augmentation through spatial risk assessment and scenario-based planning.",
       "tags": [
         "Water resilience",
         "Wastewater circularity",
         "Risk assessment"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/water-systems.webp",
+      "imageAlt": "Illustration of urban water systems"
     },
     {
       "id": "bindal-flood",
@@ -61,14 +67,15 @@ window.PORTFOLIO_DATA = {
       "category": "Research",
       "status": "Ongoing",
       "year": "2026–",
-      "description": "Developing a catchment and river-corridor flood-risk assessment in Dehradun through GIS and hydrological/hydraulic modelling, with further assessment of potential interventions. Modelling is in progress; no performance claims are made.",
+      "description": "Flood-risk modelling and spatial analysis along Dehradun’s Bindal River, with exploration of potential resilience interventions. Work ongoing.",
       "tags": [
         "Flood modelling",
         "Dehradun",
         "GIS"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/planning-contours.svg",
+      "imageAlt": "Illustrated contour map design"
     },
     {
       "id": "eastern-doon",
@@ -76,14 +83,15 @@ window.PORTFOLIO_DATA = {
       "category": "Urban planning",
       "status": "Dissertation / published research",
       "year": "2021–2026",
-      "description": "GIS-based ecological sensitivity and urban-expansion analysis carried out during M.Plan research, with nature-based planning strategies for Dehradun and a related peer-reviewed book chapter.",
+      "description": "GIS-based ecological sensitivity and urban expansion analysis to inform sustainable land-use planning in Dehradun.",
       "tags": [
         "Urban ecology",
         "GIS",
         "Nature-based planning"
       ],
       "url": "https://doi.org/10.1007/978-3-031-96965-2_15",
-      "image": ""
+      "image": "assets/images/planning-contours.svg",
+      "imageAlt": "Illustrated terrain and planning diagram"
     },
     {
       "id": "centrio-mall",
@@ -91,28 +99,30 @@ window.PORTFOLIO_DATA = {
       "category": "Architecture",
       "status": "Previous professional work",
       "year": "2021",
-      "description": "Design management and coordination for a mall-multiplex project under Unison Education Foundation, involving regulatory compliance, design teams, vendors, consultants and contractors.",
+      "description": "Design management and multidisciplinary coordination for a major commercial mall-multiplex development in Dehradun.",
       "tags": [
         "Commercial",
         "Design coordination",
         "Approvals"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/centrio-mall.webp",
+      "imageAlt": "Centrio Mall exterior, Dehradun"
     },
     {
       "id": "avatar-bhagirathi",
-      "title": "Avatar by Bhagirathi",
+      "title": "Avatara by Bhagirathi Resort",
       "category": "Architecture",
-      "status": "Previous professional project",
+      "status": "Professional work",
       "year": "2017–2019",
-      "description": "Architectural project listed on LinkedIn during the period of prior architectural practice. Exact responsibilities and approved project imagery will be added after review.",
+      "description": "Hospitality architecture project associated with previous professional practice in Dehradun.",
       "tags": [
         "Architecture",
         "Design practice"
       ],
-      "url": "",
-      "image": ""
+      "url": "https://www.avatarabybhagirathi.com/",
+      "image": "assets/images/himalayas.webp",
+      "imageAlt": "Himalayan panorama used as an illustrative landscape"
     },
     {
       "id": "jw-marriott",
@@ -120,14 +130,15 @@ window.PORTFOLIO_DATA = {
       "category": "Project delivery",
       "status": "Previous professional project",
       "year": "2016",
-      "description": "Hospitality procurement and project-operations experience. The public project list notes first-phase operational supplies and equipment procurement; a detailed account of individual contribution remains to be added.",
+      "description": "Hospitality procurement and project-operations work during the Benjamin West India period.",
       "tags": [
         "Hospitality",
         "Procurement",
         "Project delivery"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/delivery-graphic.svg",
+      "imageAlt": "Abstract illustration of hospitality project coordination"
     },
     {
       "id": "cape-weligama",
@@ -135,14 +146,15 @@ window.PORTFOLIO_DATA = {
       "category": "Project delivery",
       "status": "Previous professional project",
       "year": "2012–2014",
-      "description": "International hospitality project appearing in professional project history. Individual deliverables, attribution and image permissions remain to be documented.",
+      "description": "International hospitality project experience during earlier procurement and operations practice.",
       "tags": [
         "International",
         "Hospitality",
         "Procurement"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/delivery-graphic.svg",
+      "imageAlt": "Abstract illustration of project delivery"
     },
     {
       "id": "hyatt-place-gurgaon",
@@ -150,13 +162,14 @@ window.PORTFOLIO_DATA = {
       "category": "Project delivery",
       "status": "Previous professional project",
       "year": "2012–2014",
-      "description": "Hospitality project listed in professional work history. Specific contributions, approved project photographs and supporting documents can be added as available.",
+      "description": "Hospitality project procurement and operations experience during earlier professional practice.",
       "tags": [
         "Hospitality",
         "Project operations"
       ],
       "url": "",
-      "image": ""
+      "image": "assets/images/delivery-graphic.svg",
+      "imageAlt": "Abstract illustration of project delivery"
     }
   ],
   "publications": [
@@ -302,5 +315,10 @@ window.PORTFOLIO_DATA = {
       "title": "Design & project management",
       "detail": "AutoCAD, Revit, SketchUp, Fuzor, Lumion, Photoshop, MS Project, design coordination"
     }
+  ],
+  "featuredProjects": [
+    "jst-lotus-geoai",
+    "eastern-doon",
+    "centrio-mall"
   ]
 };
