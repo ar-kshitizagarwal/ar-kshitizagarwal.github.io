@@ -1,9 +1,9 @@
-/* Public website content; update through editor.html and re-upload to GitHub. */
+/* Website content. Edit with editor.html. */
 window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Kshitiz Agarwal",
     "photo": "assets/images/portrait.webp",
-    "role": "Architect · Urban Planner · PhD Researcher",
+    "role": "Architect · Urban Planner · Research Scholar",
     "affiliation": "Department of Architecture and Planning, IIT Roorkee",
     "location": "Roorkee, Uttarakhand, India",
     "headline": "Architecture · Spatial Planning · Research · Practice",
@@ -79,10 +79,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "eastern-doon",
-      "title": "Ecologically Responsive Urban Expansion — Dehradun",
+      "title": "Ecologically Responsive Urban Expansion - Dehradun",
       "category": "Urban planning",
       "status": "Dissertation / published research",
-      "year": "2021–2026",
+      "year": "2021–2023",
       "description": "GIS-based ecological sensitivity and urban expansion analysis to inform sustainable land-use planning in Dehradun.",
       "tags": [
         "Urban ecology",
@@ -95,9 +95,9 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "centrio-mall",
-      "title": "Centrio Mall — Design Management, Dehradun",
+      "title": "Centrio Mall - Design Management, Dehradun",
       "category": "Architecture",
-      "status": "Previous professional work",
+      "status": "Professional work",
       "year": "2021",
       "description": "Design management and multidisciplinary coordination for a major commercial mall-multiplex development in Dehradun.",
       "tags": [
@@ -127,8 +127,8 @@ window.PORTFOLIO_DATA = {
     {
       "id": "jw-marriott",
       "title": "JW Marriott Kolkata",
-      "category": "Project delivery",
-      "status": "Previous professional project",
+      "category": "Project Management",
+      "status": "Professional project",
       "year": "2016",
       "description": "Hospitality procurement and project-operations work during the Benjamin West India period.",
       "tags": [
@@ -143,8 +143,8 @@ window.PORTFOLIO_DATA = {
     {
       "id": "cape-weligama",
       "title": "Cape Weligama Resort, Sri Lanka",
-      "category": "Project delivery",
-      "status": "Previous professional project",
+      "category": "Project Management",
+      "status": "Professional project",
       "year": "2012–2014",
       "description": "International hospitality project experience during earlier procurement and operations practice.",
       "tags": [
@@ -159,8 +159,8 @@ window.PORTFOLIO_DATA = {
     {
       "id": "hyatt-place-gurgaon",
       "title": "Hyatt Place Gurgaon",
-      "category": "Project delivery",
-      "status": "Previous professional project",
+      "category": "Project Management",
+      "status": "Professional project",
       "year": "2012–2014",
       "description": "Hospitality project procurement and operations experience during earlier professional practice.",
       "tags": [
@@ -173,6 +173,13 @@ window.PORTFOLIO_DATA = {
     }
   ],
   "publications": [
+    {
+      "title": "Urban Flood Hazard Analytics: Comparing Entropy Weight Method and HEC-RAS in Himalayan Basin-Valley Cities",
+      "authors": "Kshitiz Agarwal; Mahua Mukherjee; Bruno Adriano",
+      "venue": "E3S Web of Conferences",
+      "year": "2026",
+      "url": "https://doi.org/10.1051/e3sconf/202674408007"
+    },
     {
       "title": "Fostering Sustainable Rural Tourism Through Ecosystem Services and Traditional Knowledge: An Indian Perspective",
       "authors": "K. Agarwal, K. Abhinay & M. Mukherjee",
@@ -224,11 +231,6 @@ window.PORTFOLIO_DATA = {
       "period": "Jul – Dec 2023"
     },
     {
-      "title": "Research Associate",
-      "organization": "MNIT Jaipur",
-      "period": "Sep 2021 – Jun 2023"
-    },
-    {
       "title": "Design Manager",
       "organization": "Unison Education Foundation, Dehradun",
       "period": "Jan – Sep 2021"
@@ -239,7 +241,7 @@ window.PORTFOLIO_DATA = {
       "period": "Dec 2016 – Dec 2020"
     },
     {
-      "title": "General Manager — Operations",
+      "title": "General Manager - Operations",
       "organization": "Benjamin West India Pvt. Ltd., Gurugram",
       "period": "Jul 2012 – Oct 2016"
     }
@@ -260,14 +262,6 @@ window.PORTFOLIO_DATA = {
     {
       "title": "GRIHA Certified Professional",
       "year": "2020"
-    },
-    {
-      "title": "NPTEL · Urban Governance and Development Management",
-      "year": "2022"
-    },
-    {
-      "title": "Web of Science Certification",
-      "year": "2023"
     }
   ],
   "engagements": [
@@ -287,7 +281,7 @@ window.PORTFOLIO_DATA = {
       "year": "Oct 2025"
     },
     {
-      "title": "Resource Person — IIT Roorkee–ISRO Joint Workshop",
+      "title": "Resource Person - IIT Roorkee–ISRO Joint Workshop",
       "detail": "Academic and professional engagement",
       "year": "Aug 2025"
     },
@@ -298,7 +292,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "title": "Stakeholders’ Participation and Co-Design Workshop — Project GoAL",
-      "detail": "IIT Roorkee; South Asian regional engagement",
+      "detail": "IIT Roorkee",
       "year": "Mar 2024"
     }
   ],
