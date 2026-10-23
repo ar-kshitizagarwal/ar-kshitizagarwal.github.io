@@ -8,17 +8,23 @@
   const safeURL = (raw) => { try { const u=new URL(raw); return ['https:','http:','mailto:'].includes(u.protocol)?u.href:''; } catch { return ''; }};
   const anchor = (label, raw, className='') => { const a=node('a',className,label); const url=safeURL(raw); if(!url)return null; a.href=url; if(!url.startsWith('mailto:')) {a.target='_blank';a.rel='noopener noreferrer';} return a; };
   const p=d.profile||{};
-  // Display an optional headshot. If the image has not been uploaded yet, show initials.
+  // Display the same optional portrait in the header and introduction.
+  // Both keep their initials if the image is missing or fails to load.
   const portrait=$('portrait-image'), portraitInitials=$('portrait-initials');
+  const brandPortrait=$('brand-portrait-image'), brandInitials=$('brand-initials');
   if(portraitInitials){portraitInitials.textContent=(p.name||'KA').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase()||'KA';}
-  if(portrait){
-    const photo=typeof p.photo==='string' ? p.photo.trim() : '';
-    // Only load safe local relative photo paths; supports root files and assets/ folders.
-    const localPhoto=/^(?:(?:assets\/)[a-z0-9_.\/-]+|[a-z0-9_.-]+)\.(?:jpg|jpeg|png|webp|avif)$/i.test(photo) && !photo.includes('..') ? photo : '';
-    portrait.onload=()=>{portrait.hidden=false;if(portraitInitials)portraitInitials.hidden=true;};
-    portrait.onerror=()=>{portrait.hidden=true;if(portraitInitials)portraitInitials.hidden=false;};
-    if(localPhoto){portrait.alt=`Portrait of ${p.name||'the site owner'}`;portrait.src=localPhoto;}
+  const photo=typeof p.photo==='string' ? p.photo.trim() : '';
+  // Allow only local JPG/PNG/WebP/AVIF paths, as on the original site.
+  const localPhoto=/^(?:(?:assets\/)[a-z0-9_.\/-]+|[a-z0-9_.-]+)\.(?:jpg|jpeg|png|webp|avif)$/i.test(photo) && !photo.includes('..') ? photo : '';
+  function showPhoto(img, initials){
+    if(!img || !localPhoto) return;
+    img.onload=()=>{img.hidden=false;if(initials)initials.hidden=true;};
+    img.onerror=()=>{img.hidden=true;if(initials)initials.hidden=false;};
+    img.src=localPhoto;
   }
+  if(portrait) portrait.alt=`Portrait of ${p.name||'the site owner'}`;
+  showPhoto(portrait,portraitInitials);
+  showPhoto(brandPortrait,brandInitials);
   put('profile-headline',p.headline);put('profile-intro',p.intro);put('profile-role',p.role);put('profile-affiliation',p.affiliation);put('profile-bio',p.bio);put('print-name',p.name);put('print-role',`${p.role||''}  |  ${p.affiliation||''}`);put('footer-name',p.name);put('current-year',new Date().getFullYear());document.title=`${p.name||'Portfolio'} | Research & Practice`;
   // Keep hero typography dynamic while safely inserting the italicized final sentence.
   const headline=$('profile-headline');const raw=p.headline||'';const phrases=raw.split(/(?<=\.)\s+/);if(phrases.length>1){headline.replaceChildren(document.createTextNode(phrases[0]+' '),node('em','',phrases.slice(1).join(' ')));}

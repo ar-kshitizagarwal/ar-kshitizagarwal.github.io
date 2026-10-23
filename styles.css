@@ -32,3 +32,10 @@
 .hero-portrait [hidden]{display:none!important}
 .hero-signature .hero-identity{margin:0;line-height:1.8}
 @media(max-width:680px){.hero-signature{gap:13px}.hero-portrait{width:70px;height:70px}.hero-portrait>span{font-size:23px}}
+
+/* Match the small header logo to the main portrait, keeping initials as fallback. */
+.brand-mark{overflow:hidden}
+.brand-mark>.brand-initials{color:#fff}
+.brand-mark>.brand-initials>span{color:var(--amber)}
+.brand-mark>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:inherit}
+.brand-mark>[hidden]{display:none!important}
